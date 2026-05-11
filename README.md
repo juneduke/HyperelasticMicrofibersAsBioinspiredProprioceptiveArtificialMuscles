@@ -77,7 +77,7 @@ These scripts assume the following laboratory hardware classes. Replace device n
 
 | Component | Used by | Configuration appearing in code |
 |---|---|---|
-| Arduino-compatible microcontroller | all `.ino`; MATLAB serial-control scripts | Sketch-dependent serial rate: 9600 or 115200 baud |
+| Arduino-compatible microcontroller | all `.ino`; MATLAB serial-control scripts | Sketch-dependent serial rate: 9600 or 115200 baud, specified in each script |
 | Stepper motor and stepper driver | `CyclicActuation.ino`, `PassiveCyclicStraining.ino`, `ResponseTimeTesting .ino`, `StepInput.ino` | Pins 7/5 for one motor and 10/8 for another through `Stepper(...)`; auxiliary pins 2-10 |
 | Pump/valve relay module | relay sketches; `FeedbackControlLivePlotter.m` | Active-low relay behavior assumed; pump/valve pins 4/5 and power pin 6 |
 | MPU-6050 IMU | `MPUSerialCommunication(Accelerometer).ino`; `FeedbackControlLivePlotter.m` | I2C address `0x68`; serial stream `Roll,Pitch,Yaw` at 115200 baud |

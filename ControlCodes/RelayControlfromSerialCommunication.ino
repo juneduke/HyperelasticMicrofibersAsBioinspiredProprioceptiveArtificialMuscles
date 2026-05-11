@@ -2,6 +2,7 @@
  * Pin 5: Pump Relay (Heighten Pressure)
  * Pin 4: Valve Relay (Release Pressure)
  * Pin 6: System Power Relay
+ To be used with FeedbackControlLivePlotter.m
  */
 
 const int relayPump = 4;  

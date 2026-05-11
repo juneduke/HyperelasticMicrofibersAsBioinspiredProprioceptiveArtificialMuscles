@@ -13,13 +13,13 @@ holdDuration = 5;            % Seconds to maintain target before releasing
 smoothingParam = 0.8;       % Spline smoothing (0.7-0.95 recommended)
 
 % Path to Thorlabs Driver
-thorlabsPath = "C:\Users\bnild\OneDrive\바탕 화면\Completed Projects\Artificial Muscle\Matlab-Driver-for-Thorlabs-power-meter";
+thorlabsPath = "THORLABSPATH";
 addpath(thorlabsPath);
 
 %% --- 2. GENERATE CALIBRATION MODEL ---
 % Load existing data to train the spline
 try
-    load('2mmsample_feedback3rddayfin3mmsample.mat', 'dataLog'); 
+    load('PreviousRecordingData.mat', 'dataLog'); 
     calX = dataLog(689:1099, 2); % Power column
     calY = dataLog(689:1099, 3)-min(dataLog(689:1099, 3)); % Angle column
     

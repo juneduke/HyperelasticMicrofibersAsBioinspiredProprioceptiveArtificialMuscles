@@ -625,28 +625,6 @@ thisDir = fileparts(mfilename('fullpath'));
 cd(thisDir)
 ```
 
-### 7.4 Reproducibility recommendations for the neural-network analysis
-
-For exact reproducibility across runs, set the random seed before dividing data or training the network:
-
-```matlab
-rng(1, 'twister')
-```
-
-For Nature Communications review, report:
-
-- MATLAB release and toolbox versions.
-- Input data filenames and checksums.
-- Predictor and response variables.
-- Standardization procedure.
-- Train/validation/test split: 70/15/15.
-- Whether the split was random and the random seed used.
-- Network architecture: `[40, 20]` hidden units.
-- Training algorithm: Levenberg-Marquardt, `trainlm`.
-- Early stopping criterion: validation `max_fail = 6`.
-- Metrics: test MSE, test R², and feature-importance method.
-- Whether an independent external validation dataset was used. In the current code, the two datasets are combined and then internally split; no external validation dataset is used unless added separately.
-
 ---
 
 ## 8. Data and output files

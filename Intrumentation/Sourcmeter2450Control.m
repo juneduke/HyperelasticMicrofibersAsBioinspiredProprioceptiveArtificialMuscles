@@ -2,7 +2,7 @@
 clear; close all; clc;
 
 % --- Configuration Parameters ---
-visaAddress = 'USB::0x05E6::0x2450::04601788::INSTR'; 
+visaAddress = 'VISAADDRESS'; 
 sourceI     = 1e-3;    % [A] Current to source (e.g., 1mA)
 vLimit      = 2.0;     % [V] Voltage limit (Compliance) [cite: 23]
 nplc        = 1;       % Power Line Cycles (1=Balanced, 10=High Accuracy) 

@@ -19,7 +19,7 @@ addpath(thorlabsPath);
 %% --- 2. GENERATE CALIBRATION MODEL ---
 % Load existing data to train the spline
 try
-    load('PreviousRecordingData.mat', 'dataLog'); 
+    load('PreviousRecordingData.mat', 'calX', 'calY');
     
     % Clean data for spline (must be positive and finite)
     idx = (calX > 0) & isfinite(calX) & isfinite(calY);

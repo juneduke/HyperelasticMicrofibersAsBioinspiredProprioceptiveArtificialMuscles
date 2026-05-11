@@ -126,12 +126,7 @@ daqlist
 
 ## 5. Arduino sketches
 
-For Arduino IDE use, place each `.ino` file inside a folder with the same base name as the sketch if prompted by the IDE. With `arduino-cli`, compile and upload as follows:
-
-```bash
-arduino-cli compile --fqbn <fqbn> "ControlCodes/<sketch-folder-or-file>"
-arduino-cli upload  --fqbn <fqbn> -p <serial-port> "ControlCodes/<sketch-folder-or-file>"
-```
+For Arduino IDE use, place each `.ino` file inside a folder with the same base name as the sketch if prompted by the IDE.
 
 Several sketches wait at startup until a serial byte is received, to initiate the experiment at wanted periods. After uploading, open the serial monitor at the sketch baud rate and send any character, or have the corresponding MATLAB script open the serial port and write the startup command.
 

@@ -55,6 +55,7 @@ The MATLAB scripts use the modern `serialport`, `daq`, and `visadev` interfaces.
 - Thorlabs optical power meter MATLAB driver: `https://github.com/Tinyblack/Matlab-Driver-for-Thorlabs-power-meter`.
 - Vendor VISA/USB drivers for connected instruments, including Keithley 2450 and Thorlabs instruments.
 
+A standard, full installation of MATLAB and Simulink typically takes between 30 to 45 minutes. However, installation times can vary significantly based on your machine's performance, internet speed, and the number of toolboxes selected.
 
 ### 2.2 Arduino environment
 
@@ -69,6 +70,8 @@ The Arduino sketches require:
 
 Install the external Arduino library in the Arduino IDE Library Manager
 
+Installing the Arduino IDE typically takes a 2-5 minutes.
+Installing standard Arduino libraries generally takes a few seconds to under a minute.
 ---
 
 ## 3. Hardware and instrument configuration

@@ -10,7 +10,7 @@ baudRate = 115200;
 % USER SETTINGS
 targetAngle = 5;           % Desired angle in degrees
 holdDuration = 5;            % Seconds to maintain target before releasing
-smoothingParam = 0.8;       % Spline smoothing (0.7-0.95 recommended)
+smoothingParam = 0.8;       % Spline smoothing
 
 % Path to Thorlabs Driver
 thorlabsPath = "THORLABSPATH";
@@ -20,8 +20,6 @@ addpath(thorlabsPath);
 % Load existing data to train the spline
 try
     load('PreviousRecordingData.mat', 'dataLog'); 
-    calX = dataLog(689:1099, 2); % Power column
-    calY = dataLog(689:1099, 3)-min(dataLog(689:1099, 3)); % Angle column
     
     % Clean data for spline (must be positive and finite)
     idx = (calX > 0) & isfinite(calX) & isfinite(calY);

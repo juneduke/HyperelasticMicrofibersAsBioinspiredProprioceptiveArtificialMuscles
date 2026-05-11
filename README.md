@@ -623,7 +623,11 @@ thisDir = fileparts(mfilename('fullpath'));
 cd(thisDir)
 ```
 
+The full analysis code is expected to run in 1-2 minutes given standard computation hardware.
+
 ---
+
+
 
 ## 8. Data and output files
 
